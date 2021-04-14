@@ -20,7 +20,7 @@ _WM_1 AS (
 _WM_2 AS (
     SELECT code_series_id, year, period, series_title
     FROM _WM_1
-    WHERE year = 2018
+    WHERE year = 2019
     LIMIT 1000
 ),
 # Adiciona outra condição para series_title.
@@ -57,7 +57,7 @@ CÓDIGO OTIMIZADO
 
 # Cria tabela temporária utilizando EXPIRATION_TIMESTAMP.
 # CREATE OR REPLACE TEMP TABLE é apenas para Script.
-CREATE OR REPLACE TABLE `bigquery-public-data.bls.temp_wm`
+CREATE OR REPLACE TABLE `interoper-dataplatform-prd.work.work_dados_e_analytics`
   OPTIONS(EXPIRATION_TIMESTAMP=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 1 DAY)) 
 AS
 (
@@ -71,7 +71,7 @@ AS
         `bigquery-public-data.bls.wm`
     WHERE 
         series_title LIKE "%healthcare%" AND
-        year = 2018
+        year = 2019
 );
 
 # Retorna o resultado final filtrando o campo calculado.
@@ -79,7 +79,6 @@ SELECT *
 FROM `bigquery-public-data.bls.temp_wm` 
 WHERE code_series_id = "WMU"
 LIMIT 1000
-
 /*
 Duração	
 0,6 s (25% mais rápida)
