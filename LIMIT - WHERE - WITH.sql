@@ -76,7 +76,7 @@ AS
 
 # Retorna o resultado final filtrando o campo calculado.
 SELECT * 
-FROM `bigquery-public-data.bls.temp_wm` 
+FROM `interoper-dataplatform-prd.work.work_dados_e_analytics`
 WHERE code_series_id = "WMU"
 LIMIT 1000
 /*
