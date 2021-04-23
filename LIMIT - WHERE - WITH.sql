@@ -44,8 +44,7 @@ CÓDIGO OTIMIZADO
 */
 
 # Cria tabela temporária utilizando EXPIRATION_TIMESTAMP.
-# CREATE OR REPLACE TEMP TABLE é apenas para Script.
-CREATE OR REPLACE TABLE `interoper-dataplatform-prd.work.work_dados_e_analytics`
+CREATE OR REPLACE TABLE `interoper-dataplatform-prd.temp_treinamento.temp_table`
   OPTIONS(EXPIRATION_TIMESTAMP=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 1 DAY)) 
 AS
 (
@@ -64,6 +63,6 @@ AS
 
 # Retorna o resultado final filtrando o campo calculado.
 SELECT * 
-FROM `interoper-dataplatform-prd.work.work_dados_e_analytics`
+FROM `interoper-dataplatform-prd.temp_treinamento.temp_table`
 WHERE code_series_id = "WMU"
 LIMIT 1000
