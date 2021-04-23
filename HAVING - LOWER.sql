@@ -16,20 +16,6 @@ HAVING
     LOWER(period) LIKE "%a%" AND
     value BETWEEN 10 AND 20
 
-/*
-Duração	
-0,7 s
-
-Bytes processados	
-9,38 MB
-
-Bytes faturados	
-10 MB
-
-Custo estimado
-0.00005
-
-*/
 
 
 /*
@@ -50,16 +36,4 @@ WHERE
 GROUP BY 
     value, year, period
 
-/*
-Duração	
-0,5 s - 28% mais performance
 
-Bytes processados	
-9,38 MB
-
-Bytes faturados	
-10 MB
-
-Custo estimado
-0.00005
-*/
