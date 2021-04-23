@@ -14,19 +14,6 @@ _WM_0 AS (
 )
 SELECT * FROM _WM_0
 
-/*
-Duração	
-4,5 s
-
-Bytes processados	
-71,1 MB
-
-Bytes faturados	
-72 MB
-
-Custo estimado
-$0.0003
-*/
 
 
 /*
@@ -44,20 +31,6 @@ _WM_0 AS (
 SELECT * FROM _WM_0 
 ORDER BY series_title 
 LIMIT 1000
-
-/*
-Duração	
-0,9 s (80% mais rápida)
-
-Bytes processados	
-71,1 MB
-
-Bytes faturados	
-72 MB
-
-Custo estimado
-$0.0003
-*/
 
 
 
